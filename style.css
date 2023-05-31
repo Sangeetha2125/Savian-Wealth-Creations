@@ -26,7 +26,7 @@ nav{
     align-items: center;
 }
 #menu-btn{
-    font-size: 2.3em;
+    font-size: 2em;
     margin: 0 0.3em;
     display: none;
 }
@@ -355,10 +355,10 @@ nav li a:hover{
     .search{
         margin: 0 1em;
     }
-    .listings{
+    .listings,.services,.city-listings{
         max-width: 340px;
     }
-    .listing-grid{
+    .listing-grid,.services-grid,.city-listing-grid{
         grid-template-columns: repeat(1,1fr);
         grid-gap:0.8em;
     }
