@@ -16,6 +16,9 @@ a{
     text-decoration: none;
     color: black;
 }
+p{
+    line-height: 1.5em;
+}
 nav{
     padding: 0.5em 1em;
     display: flex;
@@ -48,7 +51,6 @@ nav li a:hover{
     background-color: rgba(0, 0, 0, 0.13);
     transition: 0.5s ease;
 }
-
 .banner{
     background:url("images/bg.jpg");
     background-repeat: no-repeat;
@@ -89,22 +91,20 @@ nav li a:hover{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.listings,.services{
+.listings,.services,.city-listings{
     max-width: 1200px;
-    margin: auto;
-    margin-bottom: 2em;
+    margin: 2.5em auto;
     font-size: 1.2em;
 }
-.listings h2,.services h2{
+.listings > h2,.services > h2,.city-listings > h2{
     font-size: 1.65em;
     text-align: center;
-    margin:1.4em auto;
+    margin:auto;
     margin-bottom: 0.1em;
 }
 .listings > a{
     display: block;
     margin: auto;
-    margin-bottom: 2em;
     font-size: 1.1em;
     color:rgb(2, 2, 114);
     text-align: center;
@@ -113,11 +113,10 @@ nav li a:hover{
 .listings > a:hover{
     text-decoration: underline;
 }
-.listing-grid,.services-grid{
+.listing-grid,.services-grid,.city-listing-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap:1.1em;
-    margin: 1em;
 }
 .list-card{
     position: relative;
@@ -213,6 +212,7 @@ nav li a:hover{
     width:100%;
     object-fit: contain;
     opacity: 0.88;
+    filter: grayscale(0.2);
 }
 .service-card h3{
     text-align: center;
@@ -220,6 +220,42 @@ nav li a:hover{
 }
 .service-card p{
     text-align: justify;
+}
+.services > h2{
+    margin-bottom: 0.5em;
+}
+.listings > a{
+    margin-bottom: 1.6em;
+}
+.city-listings h2{
+    font-size: 1.45em;
+    margin-bottom: 0.75em;
+}
+.city-listings h3{
+    margin-bottom: 0;
+    font-size: 1.1em;
+    color:rgb(2, 2, 114);
+    text-align: center;
+    font-weight: 300;
+}
+.city-listing-card{
+    position: relative;
+}
+.city-listing-card img{
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 4%;
+    filter: grayscale(0.5);
+}
+.city-name{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    letter-spacing: 2.5px;
 }
 @media screen and (max-width:1200px) {
     nav img{
